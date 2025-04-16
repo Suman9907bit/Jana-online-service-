@@ -1,8 +1,57 @@
 <html>
 <head><title>www.jana online service</title></head>
 
-
+ <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: white;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .close {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
 <body>
+<!-- Popup Modal -->
+<div id="popupModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Welcome to Jana Online Service</h2>
+    <p>Thank you for visiting! Explore our services.</p>
+  </div>
+</div>
+
+<!-- তোমার আগের মূল ওয়েবসাইটের বাকি অংশ এখানে থাকবে (যেমন লগইন, হেডার, ইমেজ ইত্যাদি) -->
+
+<script>
+  window.onload = function() {
+    var modal = document.getElementById("popupModal");
+    var span = document.getElementsByClassName("close")[0];
+    modal.style.display = "block";
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
+</script>	
 
 <div style="background-color:14A4B5; height:30px">&nbsp;&nbsp;<font color="white" size="5">&#9990;</font>
 <font color="yellow" face="arial rounded MT">+91 9907992247</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
